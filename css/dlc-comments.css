@@ -1,0 +1,289 @@
+html, body, div, span, iframe,
+h1, h2, h3, h4, h5, h6, p, pre,
+a, font, img, ol, ul, li,
+fieldset, form, label, legend,
+table, tbody, tfoot, thead, tr, th, td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-weight: inherit;
+    font-style: inherit;
+    font-size: 100%;
+    font-family: inherit;
+    vertical-align: baseline;
+}
+
+html, body {
+    height:100%;
+}
+
+body {
+    background: lightgrey;
+}
+
+#wrapper {
+    width: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+/* buttons */
+.button-view {
+    display: inline-block;
+    margin: 0 5px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 2px solid white;
+    background: white;
+    box-shadow: inset 0px 0px 5px grey;
+    text-decoration: none;
+    font-variant: small-caps;
+    color: black;
+    -webkit-transition: background 0.5s ease 0s;
+    -moz-transition: background 0.5s ease 0s;
+    -o-transition: background 0.5s ease 0s;
+    transition: background 0.5s ease 0s;
+}
+
+.button-view:hover {
+    background: grey;
+    color:white;
+    box-shadow: inset 0px 0px 5px grey;
+}
+
+.button-view:active {
+    background: grey;
+    background: linear-gradient(black 0%, grey 100%);
+}
+
+.button-view:focus {
+    outline: none;
+}
+
+.btn-light.btn-light {
+    padding: 5px 5px;
+}
+
+.btn-delete.btn-delete {
+    background: #ff0012;
+    color: white;
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+}
+
+.btn-delete.btn-delete:hover {
+    box-shadow: inset 0 0 4px gray;
+}
+
+.btn-delete.btn-delete:active {
+    background: linear-gradient(black 0%, #ff0012 100%);
+}
+
+/* links */
+
+.base-link {
+    color: #8B4726;
+    text-decoration: none;
+    -webkit-transition: color 0.5s ease 0s;
+    -moz-transition: color 0.5s ease 0s;
+    -o-transition: color 0.5s ease 0s;
+    transition: color 0.5s ease 0s;
+}
+
+.base-link:hover {
+    color: #EE7621;
+}
+
+.imp-info {
+    font-weight: bold;
+    color: #8B4726;
+}
+
+/* styles of comment form */
+
+/* add part */
+.dlc-add-comments {
+    padding: 5px 2%;
+    border-bottom: 1px solid white;
+    background: #00E5EE;
+}
+
+.comments-form-block {
+    width: 70%;
+}
+
+.comments-form-block form > div {
+    margin-bottom: 5px;
+}
+
+.comments-form-block form > div > p:first-child {
+    text-align: right;
+}
+
+.comments-form-block textarea {
+    width: 100%;
+    max-width: 100%;
+    height: 50px;
+    padding: 1%;
+    border: 2px solid white;
+    border-radius: 5px;
+    box-shadow: inset 0 0 5px grey;
+}
+
+.comments-form-block textarea:focus {
+    outline: none;
+    border: 2px solid #00C5CD;
+    box-shadow: none;
+}
+
+.symbols-left {
+    font-size: 0.8em;
+}
+
+.symbols-left > span, .comments-count {
+    font-weight: bold;
+    color: #EE7621;
+}
+
+.add-comment-error {
+    padding: 0 5px;
+    font-size: 0.9em;
+    color: #ff0012;
+}
+
+/* view part */
+.dlc-view-comments {
+    padding-top: 10px;
+    background: #00E5EE;
+}
+
+.dlc-view-comments .comment {
+    position: relative;
+    padding: 5px 1%;
+    border-bottom: 1px solid #1E90FF;
+}
+
+.dlc-view-comments .dlc-comment-body {
+    padding: 5px;
+}
+
+.dlc-view-comments .dlc-comment-header {
+    padding-top: 3px;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+.dlc-view-comments .comment:nth-of-type(even) {
+    background: white !important;
+}
+
+.dlc-view-comments .comment .btn-delete-block {
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0;
+    -webkit-transition: opacity 0.5s ease 0s;
+    -moz-transition: opacity 0.5s ease 0s;
+    -o-transition: opacity 0.5s ease 0s;
+    transition: opacity 0.5s ease 0s;
+}
+
+.dlc-view-comments .comment:hover .btn-delete-block {
+    opacity: 1;
+}
+
+.comments-anchor {
+    padding: 5px 1%;
+}
+
+/*
+    message
+*/
+.result-message span {
+    display: inline-block;
+    margin: 5px;
+    padding: 5px 10px;
+    border: 2px solid white;
+    border-radius: 5px;
+    box-shadow: inset 0px 0px 5px grey;
+}
+
+.result-message-success span {
+    background: #66CD00;
+    color: white;
+}
+
+.result-message-error span {
+    background: #ff0012;
+    color: white;
+}
+
+.dlc-loading {
+    display: none;
+    margin: 5px;
+}
+
+/* modal window */
+.modal-overlay {
+    position:absolute;
+    z-index:9999;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background-color: #000000;
+    opacity: 0.8;
+}
+
+.modal-window {
+    z-index:10000;
+    position: absolute;
+    width: 50%;
+    max-width: 500px;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    border: 2px solid white;
+    border-radius: 5px;
+    background: #00E5EE;
+    box-shadow: inset 0px 0px 5px grey;
+}
+
+.modal-window .modal-header {
+    position: relative;
+    padding: 10px 5px;
+    font-weight: bold;
+    background: #00868B;
+    color: white;
+}
+
+.modal-window .modal-header .btn-delete {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 3px;
+}
+
+.modal-window .modal-body {
+    padding: 5px;
+}
+
+.modal-window .modal-body .modal-buttons {
+    margin: 5px;
+}
+
+.dlc-modal {
+    display: block;
+}
+
+.dlc-modal.hide-modal {
+    display: none;
+}
